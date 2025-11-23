@@ -1,0 +1,34 @@
+# dbt
+target/
+dbt_packages/
+logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+dbt-env/
+venv/
+ENV/
+env/
+*.egg-info/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets (don't commit profiles.yml if it contains credentials)
+profiles.yml
+
+# Database
+*.db
+*.sqlite

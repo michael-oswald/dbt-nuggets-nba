@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: fct_game_stats
+    description: "Fact table with one row per Denver Nuggets game and basic results."
+    columns:
+      - name: game_id
+        description: "Unique game identifier from NBA stats."
+        tests:
+          - not_null
+          - unique
+
+      - name: game_date
+        description: "Calendar date of the game."
+        tests:
+          - not_null
+
+      - name: matchup
+        description: "Matchup string from NBA API, e.g. 'DEN @ LAL'."
+
+      - name: win_loss
+        description: "'W' if Nuggets won, 'L' if they lost."
+
+      - name: team_points
+        description: "Total points scored by the Nuggets in this game."
+        tests:
+          - not_null
+
+      - name: is_win
+        description: "1 if Nuggets won, 0 if they lost."

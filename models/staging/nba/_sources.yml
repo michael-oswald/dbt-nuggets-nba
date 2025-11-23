@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: nba_raw
+    schema: public
+    tables:
+      - name: raw_nba_games
+        description: "Raw game logs for Denver Nuggets pulled from the NBA API."
+      - name: raw_nba_boxscores
+        description: "Raw box score stats for Nuggets games pulled from NBA API."
